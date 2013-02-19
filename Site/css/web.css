@@ -1,0 +1,260 @@
+/*-------------------------RESETS---------------------------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+	font-size: 62.5%;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*--------------------------DEFAULT STYLES------------------------------------------------------------------------------------*/
+
+@font-face {
+	font-family: rockwell;
+	src: url('../font/rockwell-webfont-webfont.ttf');
+}
+
+body{
+	background-image: url('../images/btext.jpg');
+}
+
+#header{
+	background-color: #594e40;
+	height:80px;
+	width: 100%;
+}
+
+.head{
+	font-size: 3.6em;
+}
+
+.subhead{
+	font-size: 2.6em;
+}
+
+.subtext{
+	font-size: 1.9em;
+}
+
+.blurb{
+	font-family: Arial;
+	
+	margin-left: 30px;
+}
+
+.followup{
+	font-size: 1.9em;
+}
+
+.lblue{
+	color:#61808c;
+}
+
+.dblue{
+	color:#2a4759;
+}
+
+.red{
+	color: #a66641;
+}
+
+.brown{
+	color:#594e40;
+}
+
+.rw{
+	font-family: rockwell;
+}
+
+bold{
+	font-weight: bold;
+}
+
+#footer{
+	height: 60px;
+	width: 100%;
+	background-color: #2a4759;
+	padding-top: 10px;
+	clear: left;
+
+}
+/*--------------------------LANDING STYLES------------------------------------------------------------------------------------*/
+
+#ctaimg{
+	background-image: url('../images/ctaimg.jpg');
+	width: 371px;
+	height: 243px;
+	margin-top:5px;
+	margin: 5 auto;
+}
+
+#branding{
+	float:left;
+	background-image: url('../images/branding.png');
+	margin-top: 20px;
+	margin-left:35px;
+	width: 215px;
+	height: 45px;
+}
+
+#leftcol{
+	height: 720px;
+	width: 452px;
+	margin-left: 250px;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	background-color: #fff;
+	border:2px solid #594e40;
+	float: left;
+}
+/*-------------CTA POSITIONING ON LANDING---------------------*/
+.ctahead{
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-bottom: 5px;
+}
+
+.ctasubhead{
+	margin-left: 25px;
+	margin-bottom: 15px;
+
+}
+
+.followup{
+	margin-left: 40px;
+	margin-bottom: 25px;
+}
+
+.pointhead{
+	margin-left: 40px;
+}
+
+.ctareasons{
+	list-style: circle;
+	margin-top: 10px;
+	margin-left: 100px;
+}
+
+.ctareasons li{
+	margin-bottom: 5px;
+}
+
+/*----------------REGISTER AND LOGIN--------------------------*/
+
+#rightcol{
+	float:left;
+	margin-top:50px;
+	margin-left: 20px;
+
+}
+
+.signinbox{
+	background-color: #fff;
+	border:2px solid #594e40;
+	margin-bottom: 10px;
+	width: 429px;
+}
+
+.signinbox p{
+	margin-left: 15px;
+	margin-top: 10px;
+}
+
+.signinbox input{
+	margin-left: 15px;
+	margin-bottom: 5px;
+	width: 369px;
+	height: 64px;
+	font-size: 2.25em;
+	color: #594e40;
+}
+
+.forgot{
+	font-size:1.5em;
+	margin-left:25px;
+}
+
+.signinbox .signinbtn{
+ 	width: 190px;
+ 	height: 60px;
+ 	background-color: #41a648;
+ 	border: 2px solid #594e40;
+ 	font-size: 2.25em;
+ 	color: #fff;
+ 	font-weight: bold;
+	margin-left: 45px;
+	margin-bottom: 10px;
+}
+
+.signupbox{
+	background-color: #fff;
+	border:2px solid #594e40;
+}
+
+.signupbox p{
+	margin-left: 15px;
+	margin-top: 10px;
+}
+
+.signupbox .signupbtn{
+	width: 190px;
+ 	height: 60px;
+ 	background-color: #41a648;
+	border: 2px solid #594e40;
+	font-size: 2.25em;
+	color:#fff;
+ 	font-weight: bold;
+ 	margin-left: 195px;
+}
+
+.signupbox input{
+	margin-left: 15px;
+	margin-bottom: 5px;
+	width: 369px;
+	height: 64px;
+	font-size: 2.25em;
+	color: #594e40;
+}
+
