@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map_canvas { height: 100% }
+    </style>
+    
+    <script type="text/javascript"
+    	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuL-tWUHYx26WSntf8-DwHKepRgxNEGqk&sensor=true">
+    </script>
+    
+    <script type="text/javascript">
+    
+      function initialize() {
+      
+      // Google Maps API v3 options center: for map centering location / Zoom: For zoom level / MapTypeId: for map view type
+        var mapOptions = {
+          center: new google.maps.LatLng(28.60741, -81.28865),
+          zoom: 18,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+  		//defines markers for initial and ending position
+		var bikeroutes = [
+		  ['Downtown Orlando', 28.53834, -81.37924, 2],
+		  ['Caddy Way Trail', 28.60741, -81.28865, 1]
+		];
+     
+  setMarkers(map, bikeroutes);       
+  var myLatLng = new google.maps.LatLng(28.60741, -81.28865);
+  var bikemarker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+  });
+  	// Plots multiple path points for line plot
+    var flightPlanCoordinates = [
+        new google.maps.LatLng(37.772323, -122.214897),
+        new google.maps.LatLng(21.291982, -157.821856),
+        new google.maps.LatLng(-18.142599, 178.431),
+        new google.maps.LatLng(-27.46758, 153.027892)
+    ];
+    
+    // Takes plotted paths and defines a line color/weight/thickness between paths
+    var flightPath = new google.maps.Polyline({
+      path: flightPlanCoordinates,
+      strokeColor: "#FF0000",
+      strokeOpacity: 1.0,
+      strokeWeight: 2
+    });
+
+   flightPath.setMap(map); 
+  
+	}
+
+  
+  function setMarkers(map, locations) {
+	  // Add markers to the map
+	
+	  // Marker sizes are expressed as a Size of X,Y
+	  // where the origin of the image (0,0) is located
+	  // in the top left of the image.
+	
+	  // Origins, anchor positions and coordinates of the marker
+	  // increase in the X direction to the right and in
+	  // the Y direction down.
+	  
+	  for (var i = 0; i < locations.length; i++) {
+		    var beach = locations[i];
+		    var myLatLng = new google.maps.LatLng(beach[1], beach[2]);
+		    var marker = new google.maps.Marker({
+		        position: myLatLng,
+		        map: map,
+		        title: beach[0],
+		        zIndex: beach[3]
+		      }
+		    );
+		}
+	}
+    </script>
+  </head>
+  <body onload="initialize()">
+    <div id="map_canvas" style="width:100%; height:100%"></div>
+  </body>
+</html>
